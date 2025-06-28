@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <title>Sovelensis — Главная</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style><img src="5db58e1c-7ef9-490b-8bb0-88b8f4a09cc7 (1).png" alt="Дерево жизни" style="max-width:95%; border-radius:1.2rem; box-shadow:0 2px 16px rgba(100,140,110,0.12); margin:2rem auto 1.5rem auto; display:block;">
-    body { background: #f5f6fa; color: #232323; font-family: 'Segoe UI', 'Arial', sans-serif; margin:0; }
-    .main { max-width: 540px; margin: 2.5rem auto 0 auto; padding: 2.1rem 1.2rem 2.5rem 1.2rem; background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 18px rgba(34,50,55,0.10);}
+  <!-- Красивые шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #f5f6fa 70%, #e1f1eb 100%);
+      color: #232323;
+      font-family: 'Montserrat', 'Arial', sans-serif;
+      margin: 0;
+    }
+    .main {
+      max-width: 540px;
+      margin: 2.5rem auto 0 auto;
+      padding: 2.1rem 1.2rem 2.5rem 1.2rem;
+      background: #fff;
+      border-radius: 1.8rem;
+      box-shadow: 0 10px 48px 0 rgba(54, 100, 68, 0.18), 0 1.5px 6px 0 rgba(70,130,100,0.10);
+      position: relative;
+      transition: box-shadow 0.3s;
+    }
+    .main:hover {
+      box-shadow: 0 22px 80px 0 rgba(64, 120, 88, 0.25), 0 4px 18px 0 rgba(60,100,90,0.11);
+    }
     .menu { text-align: right; margin: 0 0 1.1rem 0;}
     .menu a {
       display: inline-block;
@@ -18,20 +37,76 @@
       font-weight: bold;
       font-size: 1.09rem;
       margin-left: 0.5rem;
-      transition: background 0.2s;
+      box-shadow: 0 2px 7px rgba(70,150,80,0.13);
+      transition: background 0.2s, box-shadow 0.3s;
     }
-    .menu a:hover { background: #6fa064;}
-    h1 { margin-bottom: 0.6rem; color: #345c36; font-size:2.1rem;}
-    .subtitle { font-size: 1.09rem; color: #557755; margin-bottom: 1.2rem;}
-    .section { margin-bottom: 1.2rem; }
-    .section-title { font-weight: bold; font-size: 1.16rem; margin-bottom: 0.5rem; color: #345c36; letter-spacing: 1px; }
-    .gmi {
+    .menu a:hover { background: #6fa064; box-shadow: 0 5px 18px rgba(70,130,80,0.17);}
+    h1 {
+      margin-bottom: 0.6rem;
+      color: #345c36;
+      font-size:2.3rem;
+      font-family: 'Marck Script', cursive, 'Montserrat', sans-serif;
+      text-align: center;
+      letter-spacing: 3px;
+      text-shadow: 0 2px 16px #e1f1eb, 0 1.5px 4px #b5e7a0;
+    }
+    .subtitle {
+      font-size: 1.09rem;
+      color: #557755;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero-img {
+      max-width: 95%;
+      border-radius: 1.2rem;
+      box-shadow: 0 8px 36px rgba(80,120,90,0.24), 0 2px 16px rgba(100,140,110,0.14);
+      margin: 2rem auto 1.5rem auto;
+      display: block;
+      border: 3.5px solid #b5e7a0;
+      background: #f6fff4;
+      transition: box-shadow 0.3s;
+    }
+    .hero-img:hover {
+      box-shadow: 0 20px 64px rgba(80,150,100,0.27), 0 5px 25px rgba(100,140,110,0.16);
+    }
+    .section-title {
+      font-weight: 600;
+      font-size: 1.16rem;
+      margin-bottom: 0.5rem;
+      color: #345c36;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .section {
+      margin-bottom: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* --- GMI фирменная подпись --- */
+    .gmi-block {
       text-align:center;
-      margin:2.6rem 0 1.4rem 0;
-      color:#86b57c;
-      font-size:1.07rem;
-      letter-spacing: 2px;
-      font-family: 'Segoe UI', 'Arial', sans-serif;
+      margin:2.8rem 0 1.2rem 0;
+    }
+    .gmi-big {
+      font-family: 'Playfair Display', 'Marck Script', serif;
+      font-size:2.5rem;
+      color: #6fa064;
+      letter-spacing: 7px;
+      font-weight: bold;
+      text-shadow: 0 2px 12px #d4ecd2, 0 2px 3px #b5e7a0;
+      line-height: 1.15;
+      margin-bottom: 0.16rem;
+      display: block;
+      font-variant: small-caps;
+    }
+    .gmi-small {
+      font-family: 'Marck Script', cursive, serif;
+      font-size: 1.05rem;
+      color: #325b30;
+      letter-spacing: 1.8px;
+      margin-top: 0.12rem;
+      display: block;
+      text-shadow: 0 1px 6px #e1f1eb;
     }
   </style>
 </head>
@@ -41,6 +116,8 @@
       <a href="contact.html">Контакты</a>
     </div>
     <h1>Sovelensis</h1>
+    <!-- Вот твоя картинка -->
+    <img src="5db58e1c-7ef9-490b-8bb0-88b8f4a09cc7 (1).png" alt="Дерево жизни" class="hero-img">
     <div class="subtitle">Росток смысла. Узелки мира. Энергия созидания.</div>
 
     <div class="section">
@@ -59,7 +136,7 @@
 
     <div class="section" style="background: #eafde7; border-left: 5px solid #86b57c; padding: 0.95rem 1rem; border-radius: 0.7rem; font-style: italic; color: #385b3c; margin-bottom: 1.2rem;">
       Sovelensis — в процессе рождения.<br>
-      Проект создаётся в потоке, без спешки и давления.<br>
+      Проект создаётся в потоке<br>
       Сейчас — фаза роста, символического укоренения.<br>
       Пусть всё распускается в своём темпе.
     </div>
@@ -69,6 +146,10 @@
       👼 Ангелы рядом. Росток уже пробился сквозь землю.
     </div>
   </div>
-  <div class="gmi">gmi : god move inside</div>
+  <!-- Фирменная подпись GMI с расшифровкой -->
+  <div class="gmi-block">
+    <span class="gmi-big">GMI</span>
+    <span class="gmi-small">god move inside</span>
+  </div>
 </body>
 </html>
